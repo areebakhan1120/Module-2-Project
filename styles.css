@@ -150,39 +150,40 @@ li {
   transition: all 300ms ease;
 }
 
-.btn__menu--svg:hover{
+.btn__menu--svg:hover {
   cursor: pointer;
-    filter: invert(26%) sepia(94%) saturate(7476%) hue-rotate(261deg) brightness(94%) contrast(115%);
-
+  filter: invert(26%) sepia(94%) saturate(7476%) hue-rotate(261deg)
+    brightness(94%) contrast(115%);
 }
 
-
-.menu__backdrop{
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-z-index: 100;
-display: flex;
-justify-content: center;
-align-items: center;
-opacity: 0;
-visibility: hidden;
-transition: all 300ms ease;
+.menu__backdrop {
+  position: fixed; /* so it covers the whole screen */
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease;
+  background: rgba(0, 0, 0, 0.9); /* dark backdrop */
 }
 
+/* when body has the class "menu--open" */
 
-.btn__menu--open .menu__backdrop{
+body.menu--open .menu__backdrop {
   visibility: visible;
   opacity: 1;
 }
-.btn__menu--open{
-  max-width: 100vh;
-  overflow-y: hidden;
+
+body.menu--open {
+  overflow-y: hidden; /* prevent scrolling */
 }
 
-.menu__links{
+.menu__links {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -192,12 +193,12 @@ transition: all 300ms ease;
   padding: 32px 0;
 }
 
-.menu__link{
+.menu__link {
   color: white;
   font-size: 40px;
 }
 
-.btn__menu--close{
+.btn__menu--close {
   position: absolute;
   right: 20px;
   top: 10px;
