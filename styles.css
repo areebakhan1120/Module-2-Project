@@ -666,7 +666,7 @@ header .row {
 .plan:nth-child(odd) .plan__name,
 .plan:nth-child(odd) .plan__price,
 .plan:nth-child(odd) .plan__target {
-  specificity: (0, 3, 0);
+
   color: #1a202c;
 }
 
